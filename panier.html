@@ -83,12 +83,9 @@
                             </div>
                             <div class="d-flex justify-content-between mb-2">
                                 <span>Livraison:</span>
-                                <span id="shipping">5,00 DT</span>
+                                <span id="shipping">7,00 DT</span>
                             </div>
-                            <div class="d-flex justify-content-between mb-3">
-                                <span>TVA (20%):</span>
-                                <span id="tax">0,00 DT</span>
-                            </div>
+                        
                             <hr>
                             <div class="d-flex justify-content-between mb-4">
                                 <strong>Total:</strong>
@@ -114,7 +111,7 @@
             <div class="row">
                 <div class="col-md-4">
                     <h5>StyleVibe</h5>
-                    <p>Votre boutique de vêtements tendance depuis 2024.</p>
+                    <p>Votre boutique de vêtements tendance depuis 2026.</p>
                 </div>
                 <div class="col-md-4">
                     <h5>Liens rapides</h5>
@@ -133,7 +130,7 @@
                 </div>
             </div>
             <hr class="bg-white">
-            <p class="text-center mb-0">&copy; 2024 StyleVibe. Tous droits réservés.</p>
+            <p class="text-center mb-0">&copy; 2026 StyleVibe. Tous droits réservés.</p>
         </div>
     </footer>
 
@@ -244,17 +241,15 @@
         }
 
         function updateTotals() {
-            const cart = getCart();
-            const subtotal = cart.reduce((sum, item) => sum + (item.price * item.quantity), 0);
-            const shipping = cart.length > 0 ? 5 : 0;
-            const tax = (subtotal * 0.20);
-            const total = subtotal + shipping + tax;
+    const cart = getCart();
+    const subtotal = cart.reduce((sum, item) => sum + (item.price * item.quantity), 0);
+    const shipping = cart.length > 0 ? 7 : 0;
+    const total = subtotal + shipping;
 
-            document.getElementById('subtotal').textContent = subtotal.toFixed(2) + ' DT';
-            document.getElementById('shipping').textContent = shipping.toFixed(2) + ' DT';
-            document.getElementById('tax').textContent = tax.toFixed(2) + ' DT';
-            document.getElementById('total').textContent = total.toFixed(2) + ' DT';
-        }
+    document.getElementById('subtotal').textContent = subtotal.toFixed(2) + ' DT';
+    document.getElementById('shipping').textContent = shipping.toFixed(2) + ' DT';
+    document.getElementById('total').textContent = total.toFixed(2) + ' DT';
+}
 
         function proceedToCheckout() {
             const cart = getCart();

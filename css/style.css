@@ -1,0 +1,129 @@
+/* Style général */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding-top: 76px; /* Pour compenser la navbar fixe */
+}
+
+/* Hero section */
+.hero-section {
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    padding: 60px 0;
+}
+
+/* Navbar personnalisée */
+.navbar-brand {
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+.navbar-brand i {
+    color: #3032a3;
+    margin-right: 10px;
+}
+
+/* Cards */
+.card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease, opacity 0.3s ease;
+    border: none;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1) !important;
+}
+
+.card-img-top {
+    height: 250px;
+    object-fit: cover;
+}
+
+/* Filtres de catégorie */
+.filter-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.filter-btn {
+    transition: all 0.3s ease;
+    border-color: #3032a3;
+    color: #3032a3;
+}
+
+.filter-btn:hover {
+    background-color: #3032a3;
+    color: white;
+    border-color: #3032a3;
+}
+
+.filter-btn.active {
+    background-color: #3032a3;
+    color: white;
+    border-color: #3032a3;
+}
+
+/* Animation de transition des cartes produits */
+#productGrid > div {
+    opacity: 1;
+    transition: opacity 0.3s ease;
+}
+
+#productGrid > div.show {
+    opacity: 1;
+}
+
+#productGrid > div:not(.show) {
+    opacity: 0;
+}
+
+/* Carousel */
+.carousel-item img {
+    height: 500px;
+    object-fit: cover;
+}
+
+.carousel-caption {
+    bottom: 20%;
+}
+
+/* Boutons */
+.btn-primary {
+    background-color: #3032a3;
+    border-color: #e6e9ec;
+    padding: 10px 25px;
+}
+
+.btn-primary:hover {
+    background-color: #3032a3;
+    border-color: #b2b7be;
+}
+
+/* Footer */
+footer a {
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+footer a:hover {
+    color: white !important;
+}
+
+.social-icons a:hover {
+    opacity: 0.8;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .carousel-item img {
+        height: 300px;
+    }
+    
+    .hero-section {
+        text-align: center;
+        padding: 30px 0;
+    }
+    
+    body {
+        padding-top: 66px;
+    }
+}

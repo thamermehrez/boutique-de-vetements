@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StyleVibe - Boutique de vêtements</title>
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- CSS Perso -->
+    <link rel="stylesheet" href="css/style.css">
+    
+    <!-- Font Awesome pour les icônes -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- ===== NAVBAR ===== -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <i class="fas fa-tshirt"></i> StyleVibe
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="index.html">Accueil</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="produits.html">Produits</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="panier.html">
+                            <i class="fas fa-shopping-cart me-2"></i>Panier <span class="badge bg-danger" id="cartCount">0</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ===== HERO SECTION (Jumbotron) ===== -->
+    <section class="hero-section">
+        <div class="container py-5 mt-5">
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <h1 class="display-4 fw-bold">Votre Style, Notre Passion</h1>
+                    <p class="lead">Découvrez notre collection exclusive de vêtements tendance pour toutes les occasions.</p>
+                    <a href="produits.html" class="btn btn-primary btn-lg">Voir la Collection</a>
+                </div>
+                <div class="col-lg-6">
+                    <img src="https://images.unsplash.com/photo-1445205170230-053b83016050?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" 
+                         alt="Mode" class="img-fluid rounded shadow">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== CARROUSEL ===== -->
+    <section class="py-5 bg-light">
+        <div class="container">
+            <h2 class="text-center mb-4">Promotions du Moment</h2>
+            <div id="promoCarousel" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner rounded">
+                    <div class="carousel-item active">
+                        <img src="https://fashionmagazine.mblycdn.com/fm/resized/1993/04/w2400/Levis-Feature-horizontal.png" 
+                             class="d-block w-100" alt="Promotion 1">
+                        <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-50 rounded p-3">
+                            <h5>-30% sur les jeans</h5>
+                            <p>Profitez de cette offre exceptionnelle</p>
+                        </div>
+                    </div>
+                
+                    <div class="carousel-item">
+                        <img src="https://www.firstdeliverygroup.com/wp-content/uploads/2023/09/First-car.webp".
+                             class="d-block w-100" alt="Promotion 3">
+                        <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-50 rounded p-3">
+                            <h5>Livraison offerte</h5>
+                            <p>À partir de 50 DT d'achat</p>
+                        </div>
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#promoCarousel" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon"></span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#promoCarousel" data-bs-slide="next">
+                    <span class="carousel-control-next-icon"></span>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== NOUVEAUTÉS (Cards) ===== -->
+    <section class="py-5">
+        <div class="container">
+            <h2 class="text-center mb-4">Nos Nouveautés</h2>
+            <div class="row">
+                <!-- Produit 1 -->
+                <div class="col-md-4 mb-4">
+                    <div class="card h-100 shadow">
+                        <img src="https://princesse-fleurie.com/cdn/shop/products/Robe-fluide-courte-fleurie_2_600x.jpg?v=1677762560" 
+                             class="card-img-top" alt="Robe d'été">
+                        <div class="card-body">
+                            <h5 class="card-title">Robe d'Été Florale</h5>
+                            <p class="card-text">Robe légère en coton avec motif floral, parfaite pour les journées ensoleillées.</p>
+                            <p class="h4 text-primary">49,99 DT</p>
+                            <button class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#productModal1">
+                                Voir détails
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Produit 2 -->
+                <div class="col-md-4 mb-4">
+                    <div class="card h-100 shadow">
+                        <img src="https://www.ganni.com/dw/image/v2/AAWT_PRD/on/demandware.static/-/Sites-ganni-master-catalogue/default/dw9210c379/images/images/packshots/A1010172_567_1.jpg?sh=2000" 
+                             class="card-img-top" alt="Veste en jean">
+                        <div class="card-body">
+                            <h5 class="card-title">Veste en Jean Détachée</h5>
+                            <p class="card-text">Veste décontractée pour un look urbain et tendance.</p>
+                            <p class="h4 text-primary">79,99 DT</p>
+                            <button class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#productModal2">
+                                Voir détails
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== MODALS (Détails produits) ===== -->
+    <!-- Modal 1 -->
+    <div class="modal fade" id="productModal1" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Robe d'Été Florale</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <img src="https://princesse-fleurie.com/cdn/shop/products/Robe-fluide-courte-fleurie_2_600x.jpg?v=1677762560" 
+                         class="img-fluid mb-3" alt="Robe d'été">
+                    <p><strong>Prix:</strong> 49,99 DT</p>
+                    <p><strong>Description:</strong> Robe légère en coton 100% biologique. Coupe ajustée, longueur midi. Lavable en machine.</p>
+                    <p><strong>Tailles disponibles:</strong> XS, S, M, L, XL</p>
+                    <p><strong>Couleurs:</strong> Blanc floral, Bleu floral, Rose floral</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fermer</button>
+                    <button type="button" class="btn btn-primary">Ajouter au panier</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal 2 -->
+    <div class="modal fade" id="productModal2" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Veste en Jean Détachée</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <img src="https://www.ganni.com/dw/image/v2/AAWT_PRD/on/demandware.static/-/Sites-ganni-master-catalogue/default/dw9210c379/images/images/packshots/A1010172_567_1.jpg?sh=2000" 
+                         class="img-fluid mb-3" alt="Veste en jean">
+                    <p><strong>Prix:</strong> 79,99 DT</p>
+                    <p><strong>Description:</strong> Veste en jean classique et intemporelle. Coupe décontractée avec poches avant. Parfaite pour tous les styles.</p>
+                    <p><strong>Tailles disponibles:</strong> XS, S, M, L, XL, XXL</p>
+                    <p><strong>Couleurs:</strong> Bleu ciel, Bleu foncé, Noir</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fermer</button>
+                    <button type="button" class="btn btn-primary">Ajouter au panier</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="bg-dark text-white py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <h5>StyleVibe</h5>
+                    <p>Votre boutique de vêtements tendance depuis 2024.</p>
+                </div>
+                <div class="col-md-4">
+                    <h5>Liens rapides</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="index.html" class="text-white-50">Accueil</a></li>
+                        <li><a href="produits.html" class="text-white-50">Produits</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h5>Suivez-nous</h5>
+                    <div class="social-icons">
+                        <a href="#" class="text-white me-3"><i class="fab fa-facebook fa-2x"></i></a>
+                        <a href="#" class="text-white me-3"><i class="fab fa-instagram fa-2x"></i></a>
+                        <a href="#" class="text-white"><i class="fab fa-tiktok fa-2x"></i></a>
+                    </div>
+                </div>
+            </div>
+            <hr class="bg-white">
+            <p class="text-center mb-0">&copy; 2024 StyleVibe. Tous droits réservés.</p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- JS Perso -->
+    <script src="js/script.js"></script>
+
+    <!-- Script pour synchroniser le panier -->
+    <script>
+        // Fonctions du panier (partagées avec tous les pages)
+        function getCart() {
+            const cart = localStorage.getItem('stylevibe_cart');
+            return cart ? JSON.parse(cart) : [];
+        }
+
+        function updateCartCount() {
+            const cart = getCart();
+            const totalItems = cart.reduce((sum, item) => sum + item.quantity, 0);
+            const cartCountElement = document.getElementById('cartCount');
+            if (cartCountElement) {
+                cartCountElement.textContent = totalItems;
+            }
+        }
+
+        // Initialiser le compte du panier au chargement
+        document.addEventListener('DOMContentLoaded', function() {
+            updateCartCount();
+            
+            // Mettre à jour le compte du panier à chaque changement du localStorage
+            window.addEventListener('storage', function() {
+                updateCartCount();
+            });
+        });
+
+
+    </script>
+</body>
+</html>

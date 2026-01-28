@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Produits - StyleVibe</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- Navbar (identique à index.html) -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <i class="fas fa-tshirt"></i> StyleVibe
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+
+                        <a class="nav-link active" href="produits.html">Produits</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="panier.html">
+                            <i class="fas fa-shopping-cart me-2"></i>Panier <span class="badge bg-danger" id="cartCount">0</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header Produits -->
+    <section class="py-5 mt-5 bg-light">
+        <div class="container">
+            <h1 class="display-5 fw-bold">Notre Catalogue</h1>
+            <p class="lead">Découvrez notre sélection de vêtements pour toutes les occasions</p>
+            
+            <!-- Filtres par catégorie -->
+            <div class="filter-buttons mt-4">
+                <button class="btn btn-outline-primary me-2 filter-btn active" data-filter="tous">Tous les produits</button>
+                <button class="btn btn-outline-primary me-2 filter-btn" data-filter="homme"><i class="fas fa-user-tie me-2"></i>Homme</button>
+                <button class="btn btn-outline-primary me-2 filter-btn" data-filter="femme"><i class="fas fa-user me-2"></i>Femme</button>
+                <button class="btn btn-outline-primary filter-btn" data-filter="enfant"><i class="fas fa-child me-2"></i>Enfant</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Grille de produits -->
+    <section class="py-5">
+        <div class="container">
+            <div class="row" id="productGrid">
+                <!-- Produit 2 -->
+                <div class="col-lg-3 col-md-4 col-sm-6 mb-4 product-item" data-category="homme" data-product-name="Pantalon Chino" data-product-id="2" data-product-price="59.99">
+                    <div class="card h-100 shadow">
+                        <span class="badge bg-success position-absolute m-2">En stock</span>
+                        <img src="https://www.cocorico.store/cdn/shop/files/chino-beige-2.jpg?v=1752477353&width=800" 
+                             class="card-img-top" alt="Pantalon Chino">
+                        <div class="card-body">
+                            <h5 class="card-title">Pantalon Chino</h5>
+                            <p class="card-text text-truncate">Pantalon décontracté en coton stretch.</p>
+                            <div class="d-flex justify-content-between align-items-center mb-2">
+                                <span class="h5 text-primary mb-0">59,99 DT</span>
+                            </div>
+                            <button class="btn btn-primary w-100 mt-3 add-to-cart-btn" data-product-id="2" data-product-name="Pantalon Chino" data-product-price="59.99" data-product-image="https://images.unsplash.com/photo-1591047139829-d91aecb6caea?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80">
+                                <i class="fas fa-shopping-cart me-2"></i>Ajouter au panier
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Produit 3 -->
+                <div class="col-lg-3 col-md-4 col-sm-6 mb-4 product-item" data-category="enfant" data-product-name="Ensemble Enfant" data-product-id="3" data-product-price="29.99">
+                    <div class="card h-100 shadow">
+                        <span class="badge bg-success position-absolute m-2">En stock</span>
+                        <img src="https://assets.adidas.com/images/h_2000,f_auto,q_auto,fl_lossy,c_fill,g_auto/4413ac2aa9674f80ae45e0c7539476c9_9366/Ensemble_sweat-shirt_a_capuche_Big_Logo_Enfants_Bleu_JC9176_21_model.jpg" 
+                             class="card-img-top" alt="Ensemble Enfant">
+                        <div class="card-body">
+                            <h5 class="card-title">Ensemble Enfant</h5>
+                            <p class="card-text text-truncate">Ensemble confortable pour les petits.</p>
+                            <div class="d-flex justify-content-between align-items-center mb-2">
+                                <span class="h5 text-primary mb-0">29,99 DT</span>
+                            </div>
+                            <button class="btn btn-primary w-100 mt-3 add-to-cart-btn" data-product-id="3" data-product-name="Ensemble Enfant" data-product-price="29.99" data-product-image="https://images.unsplash.com/photo-1519241047957-be31d7379a5d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80">
+                                <i class="fas fa-shopping-cart me-2"></i>Ajouter au panier
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Produit 4 -->
+                <div class="col-lg-3 col-md-4 col-sm-6 mb-4 product-item" data-category="femme" data-product-name="Jupe Fluide" data-product-id="4" data-product-price="45.99">
+                    <div class="card h-100 shadow">
+                        <span class="badge bg-success position-absolute m-2">En stock</span>
+                        <img src="https://www.lafiancee-shop.fr/phototheque/lafiancee-shop.com/9000/large/01W008863A.jpg?1706880564" 
+                             class="card-img-top" alt="Jupe Fluide">
+                        <div class="card-body">
+                            <h5 class="card-title">Jupe Fluide</h5>
+                            <p class="card-text text-truncate">Jupe légère et fluide pour un style élégant.</p>
+                            <div class="d-flex justify-content-between align-items-center mb-2">
+                                <span class="h5 text-primary mb-0">45,99 DT</span>
+                            </div>
+                            <button class="btn btn-primary w-100 mt-3 add-to-cart-btn" data-product-id="4" data-product-name="Jupe Fluide" data-product-price="45.99" data-product-image="https://images.unsplash.com/photo-1586790170083-2f9ceadc732d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80">
+                                <i class="fas fa-shopping-cart me-2"></i>Ajouter au panier
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Produit 5 -->
+                <div class="col-lg-3 col-md-4 col-sm-6 mb-4 product-item" data-category="femme" data-product-name="Robe d'Été Florale" data-product-id="5" data-product-price="49.99">
+                    <div class="card h-100 shadow">
+                        <span class="badge bg-success position-absolute m-2">Nouveau</span>
+                        <img src="https://princesse-fleurie.com/cdn/shop/products/Robe-fluide-courte-fleurie_2_600x.jpg?v=1677762560" 
+                             class="card-img-top" alt="Robe d'Été Florale">
+                        <div class="card-body">
+                            <h5 class="card-title">Robe d'Été Florale</h5>
+                            <p class="card-text text-truncate">Robe légère en coton avec motif floral, parfaite pour les journées ensoleillées.</p>
+                            <div class="d-flex justify-content-between align-items-center mb-2">
+                                <span class="h5 text-primary mb-0">49,99 DT</span>
+                            </div>
+                            <button class="btn btn-primary w-100 mt-3 add-to-cart-btn" data-product-id="5" data-product-name="Robe d'Été Florale" data-product-price="49.99" data-product-image="https://princesse-fleurie.com/cdn/shop/products/Robe-fluide-courte-fleurie_2_600x.jpg?v=1677762560">
+                                <i class="fas fa-shopping-cart me-2"></i>Ajouter au panier
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Produit 6 -->
+                <div class="col-lg-3 col-md-4 col-sm-6 mb-4 product-item" data-category="homme" data-product-name="Veste en Jean Détachée" data-product-id="6" data-product-price="79.99">
+                    <div class="card h-100 shadow">
+                        <span class="badge bg-success position-absolute m-2">Nouveau</span>
+                        <img src="https://www.ganni.com/dw/image/v2/AAWT_PRD/on/demandware.static/-/Sites-ganni-master-catalogue/default/dw9210c379/images/images/packshots/A1010172_567_1.jpg?sh=2000" 
+                             class="card-img-top" alt="Veste en Jean Détachée">
+                        <div class="card-body">
+                            <h5 class="card-title">Veste en Jean Détachée</h5>
+                            <p class="card-text text-truncate">Veste décontractée pour un look urbain et tendance.</p>
+                            <div class="d-flex justify-content-between align-items-center mb-2">
+                                <span class="h5 text-primary mb-0">79,99 DT</span>
+                            </div>
+                            <button class="btn btn-primary w-100 mt-3 add-to-cart-btn" data-product-id="6" data-product-name="Veste en Jean Détachée" data-product-price="79.99" data-product-image="https://www.ganni.com/dw/image/v2/AAWT_PRD/on/demandware.static/-/Sites-ganni-master-catalogue/default/dw9210c379/images/images/packshots/A1010172_567_1.jpg?sh=2000">
+                                <i class="fas fa-shopping-cart me-2"></i>Ajouter au panier
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Produit 7 -->
+                <div class="col-lg-3 col-md-4 col-sm-6 mb-4 product-item" data-category="enfant" data-product-name="Pyjama Enfant" data-product-id="7" data-product-price="24.99">
+                    <div class="card h-100 shadow">
+                        <span class="badge bg-success position-absolute m-2">En stock</span>
+                        <img src="https://drest.s3.eu-west-3.amazonaws.com/wp-content/uploads/2026/01/21091057/4Y4A6312.jpg" 
+                             class="card-img-top" alt="Pyjama Enfant">
+                        <div class="card-body">
+                            <h5 class="card-title">Pyjama Enfant</h5>
+                            <p class="card-text text-truncate">Pyjama doux et confortable.</p>
+                            <div class="d-flex justify-content-between align-items-center mb-2">
+                                <span class="h5 text-primary mb-0">24,99 DT</span>
+                            </div>
+                            <button class="btn btn-primary w-100 mt-3 add-to-cart-btn" data-product-id="7" data-product-name="Pyjama Enfant" data-product-price="24.99" data-product-image="https://images.unsplash.com/photo-1519241047957-be31d7379a5d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80">
+                                <i class="fas fa-shopping-cart me-2"></i>Ajouter au panier
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Produit 8 -->
+                <div class="col-lg-3 col-md-4 col-sm-6 mb-4 product-item" data-category="homme" data-product-name="Costume Élégant" data-product-id="8" data-product-price="199.99">
+                    <div class="card h-100 shadow">
+                        <span class="badge bg-success position-absolute m-2">Premium</span>
+                        <img src="https://www.empiredumarie.fr/wp-content/uploads/2025/08/BERLIN%20BORDEAUX_2882_optim-scaled.jpg" 
+                             class="card-img-top" alt="Costume Élégant">
+                        <div class="card-body">
+                            <h5 class="card-title">Costume Élégant</h5>
+                            <p class="card-text text-truncate">Costume deux pièces pour cérémonie.</p>
+                            <div class="d-flex justify-content-between align-items-center mb-2">
+                                <span class="h5 text-primary mb-0">199,99 DT</span>
+                            </div>
+                            <button class="btn btn-primary w-100 mt-3 add-to-cart-btn" data-product-id="8" data-product-name="Costume Élégant" data-product-price="199.99" data-product-image="https://images.unsplash.com/photo-1596755094514-f87e34085b2c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80">
+                                <i class="fas fa-shopping-cart me-2"></i>Ajouter au panier
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            
+        </div>
+    </section>
+
+    <!-- Modals -->
+    <!-- Modal générique pour l'ajout au panier -->
+    <div class="modal fade" id="cartModal" tabindex="-1">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modalProductName">Ajouter au panier</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <img id="modalProductImage" src="" alt="Produit" class="img-fluid rounded">
+                        </div>
+                        <div class="col-md-6">
+                            <p><strong>Prix:</strong> <span id="modalProductPrice" class="text-primary">0,00 DT</span></p>
+                            
+                            <div class="mb-3">
+                                <label for="sizeSelect" class="form-label"><strong>Taille:</strong></label>
+                                <select class="form-select" id="sizeSelect">
+                                    <option value="">-- Sélectionnez une taille --</option>
+                                    <option value="XS">XS</option>
+                                    <option value="S">S</option>
+                                    <option value="M" selected>M</option>
+                                    <option value="L">L</option>
+                                    <option value="XL">XL</option>
+                                    <option value="XXL">XXL</option>
+                                </select>
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="colorSelect" class="form-label"><strong>Couleur:</strong></label>
+                                <select class="form-select" id="colorSelect">
+                                    <option value="">-- Sélectionnez une couleur --</option>
+                                    <option value="Noir" selected>Noir</option>
+                                    <option value="Blanc">Blanc</option>
+                                    <option value="Bleu">Bleu</option>
+                                    <option value="Rouge">Rouge</option>
+                                    <option value="Gris">Gris</option>
+                                </select>
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="quantitySelect" class="form-label"><strong>Quantité:</strong></label>
+                                <select class="form-select" id="quantitySelect">
+                                    <option value="1" selected>1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5</option>
+                                    <option value="10">10</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fermer</button>
+                    <button type="button" class="btn btn-success" id="addToCartConfirm">
+                        <i class="fas fa-check me-2"></i>Ajouter au panier
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer (identique à index.html) -->
+    <footer class="bg-dark text-white py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <h5>StyleVibe</h5>
+                    <p>Votre boutique de vêtements tendance depuis 2024.</p>
+                </div>
+                <div class="col-md-4">
+                    <h5>Liens rapides</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="index.html" class="text-white-50">Accueil</a></li>
+                        <li><a href="produits.html" class="text-white-50">Produits</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h5>Suivez-nous</h5>
+                    <div class="social-icons">
+                        <a href="#" class="text-white me-3"><i class="fab fa-facebook fa-2x"></i></a>
+                        <a href="#" class="text-white me-3"><i class="fab fa-instagram fa-2x"></i></a>
+                        <a href="#" class="text-white"><i class="fab fa-tiktok fa-2x"></i></a>
+                    </div>
+                </div>
+            </div>
+            <hr class="bg-white">
+            <p class="text-center mb-0">&copy; 2024 StyleVibe. Tous droits réservés.</p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS seulement -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- Scripts pour le panier, filtrage et recherche -->
+    <script>
+        // Fonctions du panier (partagées avec panier.html)
+        function getCart() {
+            const cart = localStorage.getItem('stylevibe_cart');
+            return cart ? JSON.parse(cart) : [];
+        }
+
+        function saveCart(cart) {
+            localStorage.setItem('stylevibe_cart', JSON.stringify(cart));
+            updateCartCount();
+        }
+
+        function updateCartCount() {
+            const cart = getCart();
+            const totalItems = cart.reduce((sum, item) => sum + item.quantity, 0);
+            document.getElementById('cartCount').textContent = totalItems;
+        }
+
+        function addToCart(product) {
+            let cart = getCart();
+            const existingItem = cart.find(item => item.id === product.id);
+            
+            if (existingItem) {
+                existingItem.quantity += product.quantity;
+            } else {
+                cart.push(product);
+            }
+            
+            saveCart(cart);
+        }
+
+        // Gestion des boutons "Ajouter au panier"
+        document.addEventListener('DOMContentLoaded', function() {
+            // Initialiser le compte du panier
+            updateCartCount();
+
+            // Afficher tous les produits au démarrage
+            document.querySelectorAll('.product-item').forEach(card => {
+                card.classList.add('show');
+            });
+
+            // Gestion des boutons d'ajout au panier
+            document.querySelectorAll('.add-to-cart-btn').forEach(btn => {
+                btn.addEventListener('click', function() {
+                    const productId = this.getAttribute('data-product-id');
+                    const productName = this.getAttribute('data-product-name');
+                    const productPrice = parseFloat(this.getAttribute('data-product-price'));
+                    const productImage = this.getAttribute('data-product-image');
+
+                    // Remplir le modal
+                    document.getElementById('modalProductName').textContent = productName;
+                    document.getElementById('modalProductPrice').textContent = productPrice.toFixed(2) + ' DT';
+                    document.getElementById('modalProductImage').src = productImage;
+                    document.getElementById('sizeSelect').value = 'M';
+                    document.getElementById('colorSelect').value = 'Noir';
+                    document.getElementById('quantitySelect').value = '1';
+
+                    // Stocker les informations du produit
+                    document.getElementById('addToCartConfirm').dataset.productId = productId;
+                    document.getElementById('addToCartConfirm').dataset.productName = productName;
+                    document.getElementById('addToCartConfirm').dataset.productPrice = productPrice;
+                    document.getElementById('addToCartConfirm').dataset.productImage = productImage;
+
+                    // Afficher le modal
+                    const modal = new bootstrap.Modal(document.getElementById('cartModal'));
+                    modal.show();
+                });
+            });
+
+            // Gestion de la confirmation d'ajout au panier
+            document.getElementById('addToCartConfirm').addEventListener('click', function() {
+                const productId = 'product-' + this.dataset.productId + '-' + Date.now();
+                const product = {
+                    id: productId,
+                    originalId: this.dataset.productId,
+                    name: this.dataset.productName,
+                    price: parseFloat(this.dataset.productPrice),
+                    image: this.dataset.productImage,
+                    size: document.getElementById('sizeSelect').value,
+                    color: document.getElementById('colorSelect').value,
+                    quantity: parseInt(document.getElementById('quantitySelect').value)
+                };
+
+                addToCart(product);
+                
+                // Fermer le modal
+                bootstrap.Modal.getInstance(document.getElementById('cartModal')).hide();
+                
+                // Afficher une notification
+                showNotification(`${product.name} (${product.size}, ${product.color}) ajouté au panier!`);
+            });
+
+            // Filtrage des produits
+            const filterBtns = document.querySelectorAll('.filter-btn');
+            const productCards = document.querySelectorAll('.product-item');
+            
+            filterBtns.forEach(btn => {
+                btn.addEventListener('click', function() {
+                    const filterValue = this.getAttribute('data-filter');
+                    
+                    filterBtns.forEach(b => b.classList.remove('active'));
+                    this.classList.add('active');
+                    
+                    productCards.forEach(card => {
+                        if (filterValue === 'tous') {
+                            card.style.display = 'block';
+                            setTimeout(() => card.classList.add('show'), 10);
+                        } else {
+                            const category = card.getAttribute('data-category');
+                            if (category === filterValue) {
+                                card.style.display = 'block';
+                                setTimeout(() => card.classList.add('show'), 10);
+                            } else {
+                                card.classList.remove('show');
+                                setTimeout(() => card.style.display = 'none', 300);
+                            }
+                        }
+                    });
+                });
+            });
+        });
+
+        // Notification simple
+        function showNotification(message) {
+            const notification = document.createElement('div');
+            notification.className = 'alert alert-success alert-dismissible fade show position-fixed';
+            notification.style.cssText = 'top: 100px; right: 20px; z-index: 9999; min-width: 300px;';
+            notification.innerHTML = `
+                <i class="fas fa-check-circle me-2"></i>${message}
+                <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+            `;
+            document.body.appendChild(notification);
+
+            setTimeout(() => notification.remove(), 3000);
+        }
+    </script>
+</body>
+</html>
